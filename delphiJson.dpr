@@ -3,7 +3,8 @@ program delphiJson;
 uses
   Vcl.Forms,
   Main in 'Main.pas' {MainForm},
-  Car in 'Car.pas';
+  Car in 'Car.pas',
+  DeepEquals in 'DeepEquals.pas';
 
 {$R *.res}
 

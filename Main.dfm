@@ -21,10 +21,6 @@ object MainForm: TMainForm
     Height = 248
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 168
-    ExplicitTop = 120
-    ExplicitWidth = 185
-    ExplicitHeight = 89
   end
   object TopPanel: TPanel
     Left = 0
@@ -35,7 +31,6 @@ object MainForm: TMainForm
     Caption = 'TopPanel'
     ShowCaption = False
     TabOrder = 1
-    ExplicitWidth = 185
     object bSerialize: TButton
       AlignWithMargins = True
       Left = 4
@@ -45,9 +40,7 @@ object MainForm: TMainForm
       Align = alLeft
       Caption = 'Serialize'
       TabOrder = 0
-      ExplicitLeft = 1
-      ExplicitTop = 1
-      ExplicitHeight = 39
+      OnClick = bSerializeClick
     end
     object bDesirialize: TButton
       AlignWithMargins = True
@@ -58,8 +51,7 @@ object MainForm: TMainForm
       Align = alLeft
       Caption = 'Deserialize'
       TabOrder = 1
-      ExplicitLeft = 180
-      ExplicitTop = 2
+      OnClick = bDesirializeClick
     end
   end
 end

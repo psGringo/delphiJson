@@ -14,7 +14,7 @@ type
     function GetYear: integer;
     function GetBrand: string;
   public
-    constructor Create(Brand: string; Year: integer);
+    constructor Create(Brand: string = ''; Year: integer = 0);
     function ToString: string; override;
     property Year: integer read GetYear;
     property Brand: string read GetBrand;
