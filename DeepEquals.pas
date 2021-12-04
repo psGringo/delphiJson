@@ -9,6 +9,7 @@ uses
 type
   TObjectHelpers = class Helper for TObject
     function DeepEquals(const aObject: TObject): boolean;
+    function CheckDeepEquals(const aObject: TObject): Boolean;
   end;
 
 implementation
@@ -18,6 +19,12 @@ uses
   typinfo;
 
 { TObjectHelpers }
+
+function TObjectHelpers.CheckDeepEquals(const aObject: TObject): Boolean;
+begin
+  if not DeepEquals(aObject) then
+    raise Exception.Create('Objects are not equal');
+end;
 
 function TObjectHelpers.DeepEquals(const aObject: TObject): boolean;
 var

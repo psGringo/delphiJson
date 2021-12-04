@@ -18,7 +18,8 @@ uses
   Neon.Core.Types,
   Neon.Core.Persistence,
   Neon.Core.Persistence.JSON,
-  Neon.Core.Utils;
+  Neon.Core.Utils,
+  DeepEquals;
 
 type
   TMainForm = class(TForm)
@@ -64,7 +65,9 @@ begin
   toyota := TCar.Create;
   try
     Deserialize(FMitsubishiSerialized, mitsubishi);
+    mitsubishi.CheckDeepEquals(FMitsubishi);
     Deserialize(FToyotaSerialized, toyota);
+    toyota.CheckDeepEquals(FToyota);
   finally
     mitsubishi.Free;
     toyota.Free;
